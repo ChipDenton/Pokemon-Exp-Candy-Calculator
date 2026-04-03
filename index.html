@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokémon Exp Candy Calculator</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pokémon Exp Candy Calculator</h1>
+
+      <form id="calculatorForm">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <label for="expRate">Select Pokémon:</label>
+            <select id="expRate" required>
+              <option value="">Loading Pokémon...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-wrapper">
+            <label for="currExp">Current Experience Points:</label>
+            <input type="number" id="currExp" value="0">
+          </div>
+          <div class="input-wrapper level-wrapper">
+            <label for="currentLevel">Current Level:</label>
+            <input type="number" id="currentLevel" value="1" readonly>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-wrapper">
+            <label for="desiredLevel">Desired Level:</label>
+            <input type="number" min="2" max="100" id="desiredLevel" value="50">
+          </div>
+          <input type="submit" value="Calculate">
+        </div>
+      </form>
+
+      <table>
+        <tr>
+          <th>Exp. Candy</th>
+          <th>Single Candy</th>
+          <th>Optimal Usage</th>
+        </tr>
+        <tr>
+          <td>Exp. Candy XS</td>
+          <td id="XS"></td>
+          <td id="XS-opt"></td>
+        </tr>
+        <tr>
+          <td>Exp. Candy S</td>
+          <td id="S"></td>
+          <td id="S-opt"></td>
+        </tr>
+        <tr>
+          <td>Exp. Candy M</td>
+          <td id="M"></td>
+          <td id="M-opt"></td>
+        </tr>
+        <tr>
+          <td>Exp. Candy L</td>
+          <td id="L"></td>
+          <td id="L-opt"></td>
+        </tr>
+        <tr>
+          <td>Exp. Candy XL</td>
+          <td id="XL"></td>
+          <td id="XL-opt"></td>
+        </tr>
+      </table>
+
+      <div class="instructions">
+        <h3>Notes</h3>
+        <p><strong>How To Use:</strong> Pick a Pokemon, enter its current EXP and your target level, then click Calculate.</p>
+        <p><strong>Single Candy:</strong> Shows how many candies you would need if using only that type of candy.</p>
+        <p><strong>Optimal Usage:</strong> Shows the most efficient combination to minimize wasted experience.</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
